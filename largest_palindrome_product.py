@@ -5,10 +5,8 @@ def is_palindrome(n):
         digit = n % 10
         reversed = reversed * 10 + digit
         n //= 10
-    if tmp == reversed:
-        return True
-    else:
-        return False
+    return tmp == reversed:
+
 ls = []
 for i in range(100, 1000):
     for j in range(100, 1000):
