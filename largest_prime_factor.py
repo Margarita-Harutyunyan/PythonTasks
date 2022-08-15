@@ -7,18 +7,14 @@ def find_factors(num):
     return ls
 #check if a number is prime
 def is_prime(n):
-    if n == 2 or n == 3:
-        return True
-    flag = False
-    i = 2
-    for i in range(2, n // 2):
-        if n % i == 0:
-            flag = True
-            break
-    if flag:
+    if n < 2:
         return False
-    else:
-        return True
+    i = 2  
+    while i * i < n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
 
 #find the largest prime factor
 def largest_prime(number):
